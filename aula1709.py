@@ -16,6 +16,6 @@ Arthur = Criança("Arthur", "16kg", "Branco")
 print(f"O Cão {rex.nome}, com o peso: {rex.peso} da cor: {rex.cor}")
 print(f"O Cão {Selena.nome}, com o peso {Selena.peso} da cor: {Selena.cor}")
 print(f"A criança {Arthur.nome}, com o peso {Arthur.peso}, {Arthur.cor}")
-
+.
 
         
