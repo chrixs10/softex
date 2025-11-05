@@ -1,0 +1,23 @@
+body { 
+    font-family: Arial, sans-serif; 
+    background-color: #abd8be; 
+    color: #ffffff; 
+    line-height: 1.6; 
+} 
+h1 { 
+    color: #ff0000; /* Um azul Django */ 
+}
+
+
+
+ul { 
+    background-color: #000000; 
+    border: 1px solid #ffffff; 
+    adding: 15px; 
+}
+
+
+
+li { 
+    list-style-type: square; 
+}
