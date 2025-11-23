@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>Olá, {{ nome_usuario }}!</h2>
+
+<!-- Formulário de criação de tarefas -->
+<div class="form-container">
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Criar Tarefa</button>
+    </form>
+</div>
+
+<hr>
+
+<!-- Lista de tarefas -->
+<ul class="tarefas-lista">
+    {% if tarefas %}
+        {% for tarefa in tarefas %}
+            <li class="{% if tarefa.concluida %}concluida{% endif %}">
+                <!-- Título da tarefa -->
+                {% if tarefa.concluida %}
+                    <s>{{ tarefa.titulo }}</s>
+                {% else %}
+                    {{ tarefa.titulo }}
+                {% endif %}
+
+                <!-- Botões de ação -->
+                <span class="acoes">
+                    {% if not tarefa.concluida %}
+                        <form action="{% url 'concluir_tarefa' tarefa.pk %}" method="POST" style="display:inline;">
+                            {% csrf_token %}
+                            <button type="submit">Concluir</button>
+                        </form>
+                    {% endif %}
+
+                    <form action="{% url 'deletar_tarefa' tarefa.pk %}" method="POST" style="display:inline;">
+                        {% csrf_token %}
+                        <button type="submit" onclick="return confirm('Tem certeza que deseja deletar?')">Deletar</button>
+                    </form>
+                </span>
+            </li>
+        {% endfor %}
+    {% else %}
+        <li>Você não tem tarefas cadastradas.</li>
+    {% endif %}
+</ul>
+
+<style>
+    .tarefas-lista {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .tarefas-lista li {
+        padding: 8px;
+        margin-bottom: 5px;
+        background-color: #f4f4f4;
+        border-radius: 4px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .tarefas-lista li.concluida {
+        background-color: #d4edda;
+        color: #155724;
+    }
+
+    .acoes button {
+        margin-left: 5px;
+        padding: 2px 6px;
+        font-size: 0.9em;
+        cursor: pointer;
+    }
+
+    .form-container {
+        margin-bottom: 15px;
+    }
+</style>
+
+{% endblock %}

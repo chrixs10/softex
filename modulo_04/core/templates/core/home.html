@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Lista de Tarefas</h2>
+
+{% if user.is_authenticated %}
+    <p>Bem-vindo, {{ user.username }}!</p>
+
+    {% if tarefas %}
+        <ul>
+            {% for tarefa in tarefas %}
+                <li>
+                    {{ tarefa.titulo }}
+
+                    {% if not tarefa.concluida %}
+                        <a href="{% url 'concluir_tarefa' tarefa.pk %}">Concluir</a>
+                    {% else %}
+                        ✔ Concluída
+                    {% endif %}
+
+                    <a href="{% url 'deletar_tarefa' tarefa.pk %}" style="color: red;">Excluir</a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Nenhuma tarefa cadastrada.</p>
+    {% endif %}
+
+{% else %}
+    <p>Faça login para ver suas tarefas.</p>
+    <a href="{% url 'login' %}">Entrar</a>
+{% endif %}
+
+{% endblock %}
