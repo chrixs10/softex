@@ -1,0 +1,197 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Estilo para o fotao */
+.foto-perfil {
+    width: 50px; 
+    height: 50px;
+    border-radius: 50%;
+    margin: 10px auto;
+    display: block;
+    border: 3px solid white;
+    max-width: 50px; 
+}
+
+/* Cabeçalho */
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+header nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+/* Estilo para a imagem no cabeçalho */
+.foto-perfil {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 10px auto;
+    display: block;
+    border: 3px solid white;
+    max-width: 100px;
+}
+
+/* Seções */
+section {
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h2, h3, h4 {
+    color: #333;
+}
+
+/* Semana VIII: Introdução e Seletores */
+.exemplo {
+    margin: 10px 0;
+}
+
+.exemplo-texto {
+    color: red;
+}
+
+.exemplo-seletores p {
+    padding: 5px;
+    margin: 5px;
+}
+
+#exemplo-id {
+    background-color: yellow;
+}
+
+.exemplo-classe {
+    font-weight: bold;
+}
+
+.descendente {
+    color: green;
+}
+
+/* Semana IX: Propriedades de Texto */
+.exemplo-texto {
+    margin: 10px 0;
+}
+
+.fonte-grande {
+    font-family: 'Times New Roman', serif;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.cor-alinhamento {
+    color: blue;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.transform-shadow {
+    text-transform: uppercase;
+    text-shadow: 1px 1px 2px black;
+    letter-spacing: 2px;
+    line-height: 1.5;
+}
+
+/* Semana X: Propriedades de Layout */
+.exemplo-caixa {
+    display: flex;
+    justify-content: center;
+}
+
+.caixa {
+    width: 200px;
+    height: 100px;
+    padding: 10px;
+    border: 2px solid black;
+    margin: 20px;
+    background-color: lightblue;
+}
+
+/* Semana XI: Propriedades de Posicionamento */
+.exemplo-posicionamento {
+    position: relative;
+    height: 200px;
+    border: 1px solid #ccc;
+}
+
+.relativo {
+    position: relative;
+    top: 10px;
+    left: 10px;
+    background-color: lightcoral;
+    padding: 10px;
+}
+
+.absoluto {
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    background-color: lightgreen;
+    padding: 10px;
+}
+
+.fixo {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: lightyellow;
+    padding: 10px;
+}
+
+/* Semana XII: Flexbox */
+.exemplo-flexbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    background-color: #eee;
+    border: 1px solid #ccc;
+}
+
+.item {
+    flex-grow: 1;
+    background-color: lightblue;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Responsividade básica com Flexbox */
+@media (max-width: 768px) {
+    .exemplo-flexbox {
+        flex-direction: column;
+    }
+    header nav {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+}

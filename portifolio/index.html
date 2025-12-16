@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio de Christian Ribeiro - Aprendizado em CSS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        
+        <h1>Portfólio de Christian Ribeiro</h1>
+        <p>Estudante de Desenvolvimento Web, demonstrando aprendizado em CSS através de exemplos práticos das aulas.</p>
+        <nav>
+            <a href="#semana8">Semana 8</a>
+            <a href="#semana9">Semana 9</a>
+            <a href="#semana10">Semana 10</a>
+            <a href="#semana11">Semana 11</a>
+            <a href="#semana12">Semana 12</a>
+        </nav>
+        <img src="C:\Users\Pichau\Desktop\agora vai\Christianribeiro" alt="minha foto">
+    </header>
+
+    <main>
+        <!-- Semana VIII: Introdução ao CSS e Seletores -->
+        <section id="semana8">
+            <h2>Semana 8 - Introdução ao CSS e Seletores</h2>
+            <p><strong>Objetivos:</strong> Compreender o que é CSS, sua sintaxe, formas de aplicação, especificidade e comentários.</p>
+            <h3>O que é CSS?</h3>
+            <p>CSS (Cascading Style Sheets) é uma linguagem para estilizar páginas web, separando conteúdo (HTML) de apresentação.</p>
+            <h3>Sintaxe Básica</h3>
+            <p>Seletor { propriedade: valor; }</p>
+            <div class="exemplo">
+                <p class="exemplo-texto">Este texto usa estilos básicos.</p>
+            </div>
+            <h3>Formas de Aplicar CSS</h3>
+            <ul>
+                <li><strong>Inline:</strong> <code>&lt;p style="color: red;"&gt;Texto&lt;/p&gt;</code></li>
+                <li><strong>Interno:</strong> Dentro de &lt;style&gt; no HTML.</li>
+                <li><strong>Externo:</strong> Arquivo separado (como este portfólio).</li>
+            </ul>
+            <h3>Especificidade e Cascata</h3>
+            <p>Regras mais específicas vencem. Exemplo: ID > Classe > Elemento.</p>
+            <h3>Comentários</h3>
+            <p>/* Comentário em CSS */</p>
+            <h3>Seletores CSS</h3>
+            <p>Seletores básicos: elemento (p), classe (.minha-classe), ID (#meu-id). Seletores avançados: atributo [type="text"], descendência (div p), filho (div > p).</p>
+            <div class="exemplo-seletores">
+                <p id="exemplo-id">Texto com ID (específico).</p>
+                <p class="exemplo-classe">Texto com classe.</p>
+                <div>
+                    <p class="descendente">Texto descendente.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Semana IX: Propriedades de Texto -->
+        <section id="semana9">
+            <h2>Semana 9 - Propriedades de Texto</h2>
+            <p><strong>Objetivos:</strong> Aplicar formatação de texto, entender tipografia e criar textos atraentes.</p>
+            <h3>Propriedades de Fonte e Texto</h3>
+            <p>Exemplos: font-family (Arial), font-size (20px), font-weight (bold), color (blue), text-align (center), text-decoration (underline), line-height (1.5), letter-spacing (2px), text-transform (uppercase), text-shadow (1px 1px black).</p>
+            <div class="exemplo-texto">
+                <h4>Texto Formatado</h4>
+                <p class="fonte-grande">Texto grande e negrito.</p>
+                <p class="cor-alinhamento">Texto azul, centralizado e sublinhado.</p>
+                <p class="transform-shadow">TEXTO EM MAIÚSCULO COM SOMBRA.</p>
+            </div>
+        </section>
+
+        <!-- Semana X: Propriedades de Layout -->
+        <section id="semana10">
+            <h2>Semana 10 - Propriedades de Layout</h2>
+            <p><strong>Objetivos:</strong> Aplicar layout básico, entender modelo de caixa e controlar espaçamento.</p>
+            <h3>Modelo de Caixa</h3>
+            <p>Elementos têm: conteúdo, padding (preenchimento), border (borda), margin (margem).</p>
+            <div class="exemplo-caixa">
+                <div class="caixa">Caixa com width: 200px, height: 100px, padding: 10px, border: 2px solid black, margin: 20px, background-color: lightblue.</div>
+            </div>
+        </section>
+
+        <!-- Semana XI: Propriedades de Posicionamento -->
+        <section id="semana11">
+            <h2>Semana 11 - Propriedades de Posicionamento</h2>
+            <p><strong>Objetivos:</strong> Entender posicionamento e criar layouts complexos.</p>
+            <h3>Propriedades de Posicionamento</h3>
+            <p>position: static (padrão), relative, absolute, fixed. Propriedades: top, right, bottom, left, z-index. display: block, inline, inline-block. Float (básico).</p>
+            <div class="exemplo-posicionamento">
+                <div class="relativo">Posição relativa (deslocado).</div>
+                <div class="absoluto">Posição absoluta (sobreposto).</div>
+                <div class="fixo">Posição fixa (rola com a página).</div>
+            </div>
+        </section>
+
+        <!-- Semana XII: Flexbox Basico -->
+        <section id="semana12">
+            <h2>Semana 12 - Flexbox Básico</h2>
+            <p><strong>Objetivos:</strong> Introduzir Flexbox para layouts flexíveis.</p>
+            <h3>Conceito de Flexbox</h3>
+            <p>Flexbox organiza itens em containers flexíveis. display: flex. Propriedades: flex-direction (row), flex-wrap (wrap), justify-content (center), align-items (center), flex-grow (1), flex-shrink (0), flex-basis (auto).</p>
+            <div class="exemplo-flexbox">
+                <div class="item">Item 1</div>
+                <div class="item">Item 2</div>
+                <div class="item">Item 3</div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Contato: christiandepaula.rr@gmail.com | zap: (21) 96449-0062 | instagram: @chrixs10</p>
+    </footer>
+</body>
+</html>
